@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>WebApp</title>
+	<script type='text/javascript' src='main.js'></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="onstart()">
+	<div id="authorization">
+		<form name="login" id="auth_block">
+			<p align="center">WebApp</p>
+			<input name="user" type="text" placeholder="Enter Username" required>
+			<input name="pass" type="password" placeholder="Enter Password" required>
+			<input id="submit" type="button" value="Submit" onclick="showInterface(this.form)">
+		</form>
+		<footer>
+			<div id="fooinf">
+				<button onclick="about()">About</button>
+			</div>
+		</footer>
+	</div>
+		<div id="webcam" align="center">
+			<div id="place">
+				<button onclick="image(1,1)">Yard</button>
+				<button onclick="image(2,1)">Home</button>
+				<button onclick="image(3,1)">Workplace</button>
+				<button onclick="info()">Info</button>
+			</div>
+			<div id="node">
+				<div id="increase">
+					<button onclick="im_inc()">+</button>
+					<button onclick="im_dec()">-</button>
+				</div>
+				<img id="im" src="img/1.jpg" alt="image" height="400px">
+			</div>		
+			<div id="info_camera">
+				<div>
+					<p>Time:</p>
+					<div id="time">
+						<script type="text/javascript" src="js/show_time.js"></script>
+					</div>
+				</div>			
+				<div>
+					<p>Charge:</p>
+					<div id="life">
+						<script type="text/javascript" src="js/show_charge.js"></script>
+					</div>
+				</div>
+			</div>		
+		</div>
+</body>
+</html>
